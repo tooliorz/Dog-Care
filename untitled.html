@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Tutorial</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+  	$(document).ready(function(){
+	 $("button").click(function(){
+	 $("p").css({"background-color":"yellow","font-size":"200%" });
+
+	 });
+
+	});
+	$(document).ready(function(){
+		$("input").focus(function(){
+			$("span").css("display","inline").fadeOut(3000);
+					});
+	});
+
+
+
+  </script>
+
+<style>
+
+body{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+
+}
+.logo{
+	background-color: #f4f4f4;
+	padding: 10px;
+
+}
+
+
+nav{
+	margin: 0 auto; 
+	background-color: #f4f4f4;
+	padding: 10px;
+
+}
+
+
+ul{ 
+	list-style-type: none;
+	
+}
+
+
+li{
+	display: inline-block;
+	margin: 0 5% 0 5%;
+
+
+}
+
+a{
+		text-decoration:none;
+}
+
+li:nth-child(1) a{
+	color: blue;
+}
+li:nth-child(2) a{
+	color: red;
+}
+
+li:nth-child(3) a{
+	color: green;
+}
+
+li:nth-child(4) a{
+	color: black;
+}
+
+li:not(:last-child)::after{
+	content:"HI";
+	/*content: "img"*/
+}
+
+li a:hover{
+	color: #fff;
+	text-decoration: underline;
+}
+
+.js{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 960px;
+	margin: 0 auto; 
+	text-align: center;
+}
+
+
+#demo{
+	margin: 0 auto; 
+	background-color: #f4f4f4;
+	padding: 20px;
+
+}
+</style>
+
+
+
+
+
+
+</head>
+
+
+<body>
+<div class="logo"><img src="logo.png" alt="" style="width: 20%; height: 20%;"></div>
+ <nav>
+	<ul>
+		<li><a href="">HOME</a></li>
+		<li><a href="">INVESTORS</a></li>
+		<li><a href="">PRODUCTS</a></li>
+		<li><a href="">SEARCH</a></li>
+	</ul>
+</nav>
+
+
+
+<div class="js">
+<div class="example">First div element with class="example".</div>
+<button onclick="myFunction()">Try it</button>
+</div>
+
+
+<p id="demo"></p>
+
+
+
+<h2>This is a heading</h2>
+
+<p style="background-color:#ff0000">This is a paragraph.</p>
+<p style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+<!-- <p>This is a paragraph.</p> -->
+<button>Set multiple styles for p</button>
+
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+<input><span>This is wahat you see when you focus!</span>
+<p>Click in the input field get focus.</p>
+
+
+
+<script>
+ 
+
+	function myFunction(){
+		var x= document.getElementsByClassName("example");
+		x[0].innerHTML="Hello World!";
+	};
+
+	document.getElementById("demo").innerHTML="The temperature is" + toCelsius(77)+"Celsius";
+
+	function toCelsius(fahrenheit){
+		return(5/9)*(fahrenheit-32);
+	};
+
+
+
+	
+
+</script>
+</body>
+
+</html>
